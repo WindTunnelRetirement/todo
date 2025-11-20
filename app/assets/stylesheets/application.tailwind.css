@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* DaisyUI のテーマを有効化する場合は任意 */
+@layer components {
+}

@@ -1,0 +1,21 @@
+<div class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 mt-8">
+  <h1 class="text-2xl font-bold mb-4 text-center">New Task</h1>
+
+  <%= form_with model: @task, local: true, class: "space-y-4" do |form| %>
+    <div>
+      <%= form.label :title, class: "block font-semibold mb-1" %>
+      <%= form.text_field :title, class: "w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" %>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <%= form.check_box :completed, class: "form-checkbox h-5 w-5 text-blue-600" %>
+      <%= form.label :completed, "Completed", class: "font-semibold" %>
+    </div>
+
+    <div>
+      <%= form.submit "Create Task", class: "bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full" %>
+    </div>
+  <% end %>
+
+  <%= link_to "Back", tasks_path, class: "text-blue-500 hover:underline mt-4 block text-center" %>
+</div>
